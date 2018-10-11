@@ -74,9 +74,10 @@ function rememberThis(param) {
 
 function nArray(n) {
 	let array = [];
-	for (let i = 0; i <= n; i++) {
-		array[i] = i;
+	for (let i = 1; i <= n; i++) {
+		array[i-1] = i;
 	}
+	return array;
 }
 
 function addAllOpt(array) {
@@ -95,6 +96,7 @@ function divisors(array, divisor) {
 			array[index] = element/divisor;
 		});
 	}
+	return array;
 }
 
 function multiples(n,m) {

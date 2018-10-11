@@ -60,6 +60,7 @@ QUnit.test("divisors",
         let array1 = divisors([1, 2, 3, 4, 5, 6, 7, 8, 9], 3);
         let array2 = [3, 6, 9];
 
+        console.log(array1,array2)
         let is_same = compare(array1, array2);
 
         assert.ok(
