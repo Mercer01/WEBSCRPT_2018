@@ -33,7 +33,7 @@ function addTextTo(el, string) {
 }
 
 function moreBears() {
-    const element = document.getElementById("animals")
+    const element = document.getElementById("animals");
     element.src = "http://placebear.com/400/200";
     element.alt = "A bear.";
     element.title = "A BEAR!";
@@ -51,12 +51,12 @@ function setClass(el, string) {
 }
 
 function addAClass(el, string) {
-    el.classList.add(string)
+    el.classList.add(string);
     return el;
 }
 
 function removeAClass(el, string) {
-    el.classList.remove(string)
+    el.classList.remove(string);
     return el;
 }
 
@@ -84,5 +84,40 @@ function reverseList(selector){
 }
 
 function mover(selector_move, selector_append) {
+    document.querySelector(selector_append).appendChild(document.querySelector(selector_move))
+}
+
+function filler(el, array) {
+    for (const i of array) {
+        let li = document.createElement("li");
+        li.textContent = i;
+        el.appendChild(li);
+    }
+}
+
+function dupe(selector) {
+    const el = document.querySelector(selector);
+    let new_el = el.cloneNode(true);
+    new_el.removeAttribute("id");
+    el.parentNode.appendChild(new_el);
+}
+
+function removeAll(selector) {
+    const el = document.querySelectorAll(selector);
+    for(const i of el) {
+        i.parentElement.removeChild(i);
+    }
+
+}
+
+function getUserData() {
+    const username = document.querySelector("#username");
+    const speed = document.querySelector("#speed");
+    const student = document.querySelector("#student");
+    return {
+        name: username.value,
+        speed: parseInt(speed.value),
+        student: student.checked,
+    }
     
 }
