@@ -6,9 +6,9 @@ const server = http.createServer(
   (request, response) => {
     const parsedUrl = url.parse(request.url, true);
     if (parsedUrl.pathname === '/add') {
-        response.setHeader("Content-Type", "text/plain");
-        let sum = util.add(parseFloat(parsedUrl.query.a), parseFloat(parsedUrl.query.b));
-        response.end(sum.toString());
+      response.setHeader("Content-Type", "text/plain");
+      let sum = util.add(parseFloat(parsedUrl.query.a), parseFloat(parsedUrl.query.b));
+      response.end(sum.toString());
     } else {
       response.statusCode = 404;
       response.end('Not found!\n');
