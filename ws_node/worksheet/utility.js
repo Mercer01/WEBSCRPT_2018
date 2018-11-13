@@ -10,8 +10,7 @@ function compare(var1, var2) {
 
 module.exports.compare = compare;
 
-function largest(large_array) {
-    let max = Math.max(...large_array);
-    return max;
+function largest(large_array) { 
+    return Math.max(...large_array);
 }
 module.exports.largest = largest;
