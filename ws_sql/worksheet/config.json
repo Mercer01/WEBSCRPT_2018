@@ -1,0 +1,9 @@
+{
+    "mysql": {
+      "host": "localhost",
+      "user": "root",
+      "table": "Car",
+      "password": "password",
+      "database": "ws_sql"
+    }
+  }
