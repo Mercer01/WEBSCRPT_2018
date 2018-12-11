@@ -66,5 +66,6 @@ process.on('unhandledRejection', console.error);
 
 module.exports = {
     saveCar: saveCar,
-    getAveragePrice: getAveragePrice
+    getAveragePrice: getAveragePrice,
+    shutdown: shutDown
 }
